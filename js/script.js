@@ -105,29 +105,6 @@ const items = document.querySelectorAll('.item-text');
     item.classList.remove('highlight');
   });
 });
-
-function updateDynamicTime() {
-  var currentTime = new Date();
-  var hours = currentTime.getHours();
-  var minutes = currentTime.getMinutes();
-  var seconds = currentTime.getSeconds();
-  var ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12 || 12;
-
-  var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
-<<<<<<< HEAD
-  document.getElementById('dynamic-time').textContent = 'Time' + timeString;
-=======
-  document.getElementById('dynamic-time').textContent = 'Time: ' + timeString;
->>>>>>> 8742ef5728fa21506274f0e3bfe66fb08b610bc2
-
-  setTimeout(updateDynamicTime, 1000);
-}
-
-window.onload = function () {
-  updateDynamicTime();
-};
-
 const date = new Date();
 const options = { month: 'long', day: 'numeric', year: 'numeric' };
 const formattedDate = date.toLocaleDateString('en-US', options);
