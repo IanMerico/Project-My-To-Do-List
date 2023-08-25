@@ -106,6 +106,24 @@ const items = document.querySelectorAll('.item-text');
   });
 });
 
+function updateDynamicTime() {
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  var seconds = currentTime.getSeconds();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12 || 12;
+
+  var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+  document.getElementById('dynamic-time').textContent = '' + timeString;
+
+  setTimeout(updateDynamicTime, 1000);
+}
+
+window.onload = function () {
+  updateDynamicTime();
+};
+
 const date = new Date();
 const options = { month: 'long', day: 'numeric', year: 'numeric' };
 const formattedDate = date.toLocaleDateString('en-US', options);
