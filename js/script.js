@@ -115,7 +115,11 @@ function updateDynamicTime() {
   hours = hours % 12 || 12;
 
   var timeString = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+<<<<<<< HEAD
   document.getElementById('dynamic-time').textContent = 'Time' + timeString;
+=======
+  document.getElementById('dynamic-time').textContent = 'Time: ' + timeString;
+>>>>>>> 8742ef5728fa21506274f0e3bfe66fb08b610bc2
 
   setTimeout(updateDynamicTime, 1000);
 }
