@@ -4,7 +4,7 @@ const username = params.get('name');
   if (username) {
     document.getElementById('username').textContent = username;
   } else {
-    window.location.href = 'landing.html';
+    window.location.href = 'index.html';
   }
 
 // Get the list element
@@ -92,7 +92,7 @@ addButton.addEventListener('click', () => {
 // Exit the app when the user clicks the Exit button
 const exitButton = document.getElementById('exit-btn');
 exitButton.addEventListener('click', () => {
-  window.location.href = 'landing.html';
+  window.location.href = 'index.html';
 });
 
 // Add a feature that highlights the item text when the user hovers over it
